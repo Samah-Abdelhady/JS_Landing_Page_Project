@@ -220,6 +220,11 @@ section.your-active-class .landing__container::after {
     animation: rotate 5s linear 0s infinite forwards reverse;
 }
 
+/*add style for every link depending on what current section is now in view*/
+a.your-active-class {
+    background-color: #0f0cff;
+}
+
 /* Section Active Styles Keyframe Animations */
 @keyframes rotate {
 	from {
@@ -232,5 +237,41 @@ section.your-active-class .landing__container::after {
 		           translate(-1em) 
 		           rotate(-360deg);
 	}
+}
+
+#menu {
+    position : fixed;
+    top: 3%;
+    right: 3%;
+    color: #f00;
+    font-size: 1.5em;
+    border-radius: 25%;
+    cursor: pointer;
+    display: none;
+}
+
+@media (max-width: 800px) {
+    #menu {
+        display: block;
+    }
+    .navbar__menu {
+        display: none;
+        background-color: rgb(66, 72, 155);
+    }
+    .active {
+        display: block;
+    }
+    
+    header nav ul {
+        width: 100%;
+        padding: 0px;
+    }
+    header nav ul li {
+        width: 100%;
+        border: 1px solid rgba(0,0,0,0.7);
+        text-align: center;
+        font-size: 2em;
+    }
+
 }
 
